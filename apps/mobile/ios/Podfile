@@ -1,0 +1,33 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+prepare_react_native_project!
+
+platform :ios, '17.0'
+
+workspace 'TryOnMVP'
+
+project 'TryOnMVP/TryOnMVP.xcodeproj'
+
+target 'TryOnMVP' do
+  config = use_native_modules!
+  use_react_native!(
+    :path => config["reactNativePath"],
+    :hermes_enabled => true,
+    :fabric_enabled => true,
+    :app_path => "#{Pod::Config.instance.installation_root}/.."
+  )
+
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  pod 'Permission-Camera', :path => "#{permissions_path}/Permission-Camera.podspec"
+
+  pod 'react-native-vision-camera', :path => '../node_modules/react-native-vision-camera'
+
+  post_install do |installer|
+    react_native_post_install(
+      installer,
+      :mac_catalyst_enabled => false
+    )
+    __apply_Xcode_12_5_M1_post_install_workaround(installer)
+  end
+end

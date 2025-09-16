@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TryOn Button",
+  "version": "1.0.0",
+  "description": "Inject a TryOn button on product pages (Zara/H&M/Mango) that opens the iOS app via Universal Link.",
+  "host_permissions": [
+    "*://www.zara.com/*",
+    "*://www2.hm.com/*",
+    "*://shop.mango.com/*"
+  ],
+  "permissions": ["scripting", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.zara.com/*",
+        "*://www2.hm.com/*",
+        "*://shop.mango.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

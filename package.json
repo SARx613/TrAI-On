@@ -1,0 +1,15 @@
+{
+  "name": "tryon-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/mobile",
+    "extensions/safari-tryon"
+  ],
+  "scripts": {
+    "bootstrap": "yarn install --check-files",
+    "ios": "yarn workspace @tryon/mobile ios",
+    "pods": "yarn workspace @tryon/mobile pods",
+    "lint": "yarn workspace @tryon/mobile lint",
+    "typecheck": "yarn workspace @tryon/mobile typecheck"
+  }
+}
