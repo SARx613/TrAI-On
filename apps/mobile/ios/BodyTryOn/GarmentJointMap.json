@@ -1,0 +1,16 @@
+{
+  "root": "root",
+  "hips": "Hips",
+  "spine_1": "Spine",
+  "spine_3": "Chest",
+  "neck_1": "Neck",
+  "head": "Head",
+  "left_shoulder_1": "LeftShoulder",
+  "left_arm": "LeftUpperArm",
+  "left_forearm": "LeftLowerArm",
+  "left_hand": "LeftHand",
+  "right_shoulder_1": "RightShoulder",
+  "right_arm": "RightUpperArm",
+  "right_forearm": "RightLowerArm",
+  "right_hand": "RightHand"
+}

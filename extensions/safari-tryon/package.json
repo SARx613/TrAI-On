@@ -1,0 +1,9 @@
+{
+  "name": "@tryon/safari-extension",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Safari Web Extension injecting a TryOn button on Zara/H&M/Mango product pages.",
+  "scripts": {
+    "lint": "echo 'No automated lint step yet'"
+  }
+}

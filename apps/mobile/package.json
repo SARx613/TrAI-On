@@ -1,0 +1,44 @@
+{
+  "name": "@tryon/mobile",
+  "version": "0.0.1",
+  "private": true,
+  "main": "App.tsx",
+  "scripts": {
+    "start": "react-native start",
+    "ios": "react-native run-ios --scheme TryOnMVP",
+    "pods": "cd ios && pod install",
+    "lint": "eslint --max-warnings=0 App.tsx src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-native": "0.75.1",
+    "react-native-gesture-handler": "^2.16.2",
+    "react-native-permissions": "^4.1.5",
+    "react-native-reanimated": "~3.15.0",
+    "react-native-safe-area-context": "^4.10.5",
+    "react-native-screens": "^3.32.0",
+    "react-native-vision-camera": "^3.5.3"
+  },
+  "devDependencies": {
+    "@react-native/eslint-config": "^0.76.1",
+    "@react-native/metro-config": "^0.76.1",
+    "@react-native/typescript-config": "^0.76.1",
+    "@types/react": "18.2.38",
+    "@types/react-native": "0.73.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "react-native-codegen": "0.75.1",
+    "typescript": "5.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "eslintConfig": {
+    "extends": "@react-native"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
+}
